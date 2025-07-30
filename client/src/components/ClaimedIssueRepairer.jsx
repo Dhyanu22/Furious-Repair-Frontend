@@ -10,12 +10,12 @@ const ClaimedIssueRepairer = () => {
     // Fetch claimed issues for the logged-in repairer
     const fetchClaimedIssues = async () => {
       try {
-        const response = await fetch(asdasdasd
-          "http://furious-repair-backend.onrender.com/api/repairer/claimed",
-          {
-            credentials: "include",
-          }
-        );
+        const response = await fetch(
+  "http://furious-repair-backend.onrender.com/api/repairer/claimed",
+  {
+    credentials: "include",
+  }
+);
         if (!response.ok) {
           setClaimedIssues([]);
         } else {
