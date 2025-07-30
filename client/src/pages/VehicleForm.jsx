@@ -62,7 +62,8 @@ const VehicleForm = () => {
       alert("Vehicle repair request submitted!");
       navigate("/");
     } catch (err) {
-      alert("Error submitting issue");
+      console.log("Error submitting issue:", err);
+      alert("Error submitting issue : ",err);
     }
   };
 
