@@ -66,11 +66,11 @@ const SignUpLogin = () => {
 
   const checkRepairerAndRedirect = async () => {
     try {
-      const res = await fetch("http://furious-repair-backend.onrender.com/api/repairer/me", {
+      const res = await fetch("https://furious-repair-backend.onrender.com/api/repairer/me", {
         credentials: "include",
       });
       if (res.ok) {
-        const data = await res.json();asd
+        const data = await res.json();
         if (data.isRepairer) {
           localStorage.setItem(
             "user",
@@ -131,10 +131,10 @@ const SignUpLogin = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3001${endpoint}`,
-        dataToSend,
-        { withCredentials: true }
-      );
+  `https://furious-repair-backend.onrender.com${endpoint}`,
+  dataToSend,
+  { withCredentials: true }
+);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       alert(isSignUp ? "Sign up successful! 🎉" : "Sign in successful! 👋");
       setFormData({ name: "", email: "", password: "", expertise: [] });

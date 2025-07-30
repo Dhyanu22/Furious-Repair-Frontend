@@ -11,7 +11,7 @@ const ClaimedIssueRepairer = () => {
     const fetchClaimedIssues = async () => {
       try {
         const response = await fetch(
-  "http://furious-repair-backend.onrender.com/api/repairer/claimed",
+  "https://furious-repair-backend.onrender.com/api/repairer/claimed",
   {
     credentials: "include",
   }
