@@ -62,7 +62,7 @@ const NearbyShops = () => {
     // Fetch all repairer shops
     const fetchShops = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/repairer/all-shops");
+        const res = await fetch("http://furious-repair-backend.onrender.com/api/repairer/all-shops");
         const data = await res.json();
         setShops(data.shops || []);
       } catch (error) {

@@ -15,7 +15,7 @@ const UserIssueChat = () => {
     // Fetch issue details
     const fetchIssue = async () => {
       const res = await fetch(
-        `http://localhost:3001/api/users/issues/${issueId}`,
+        `http://furious-repair-backend.onrender.com/api/users/issues/${issueId}`,
         { credentials: "include" }
       );
       const data = await res.json();
@@ -29,7 +29,7 @@ const UserIssueChat = () => {
     if (issue && issue.repairer && issue.repairer._id) {
       const fetchShopLocation = async () => {
         const res = await fetch(
-          `http://localhost:3001/api/repairer/shop-location/${issue.repairer._id}`
+          `http://furious-repair-backend.onrender.com/api/repairer/shop-location/${issue.repairer._id}`
         );
         const data = await res.json();
         if (data.location) {
@@ -45,7 +45,7 @@ const UserIssueChat = () => {
 
   const fetchChat = async () => {
     const res = await fetch(
-      `http://localhost:3001/api/users/issues/${issueId}/chat`,
+      `http://furious-repair-backend.onrender.com/api/users/issues/${issueId}/chat`,
       { credentials: "include" }
     );
     const data = await res.json();
@@ -69,7 +69,7 @@ const UserIssueChat = () => {
   const handleSend = async () => {
     if (input.trim()) {
       await fetch(
-        `http://localhost:3001/api/users/issues/${issueId}/chat/message`,
+        `http://furious-repair-backend.onrender.com/api/users/issues/${issueId}/chat/message`,
         {
           method: "POST",
           credentials: "include",

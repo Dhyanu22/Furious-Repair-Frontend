@@ -13,9 +13,9 @@ const RepairerRepairsList = () => {
     // Check with backend if user is a repairer and get expertise
     const checkRepairer = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/repairer/me", {
+        const res = await fetch("http://furious-repair-backend.onrender.com/api/repairer/me", {
           credentials: "include",
-        });
+        });asdassd
         if (!res.ok) {
           setIsRepairer(false);
           setLoading(false);
@@ -34,7 +34,7 @@ const RepairerRepairsList = () => {
     const fetchRepairs = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/repairer/issues",
+          "http://furious-repair-backend.onrender.com/api/repairer/issues",
           {
             credentials: "include",
           }
@@ -61,7 +61,7 @@ const RepairerRepairsList = () => {
   const handleClaimIssue = async (issueId) => {
     try {
       const res = await fetch(
-        `http://localhost:3001/api/repairer/issues/${issueId}/claim`,
+        `http://furious-repair-backend.onrender.com/api/repairer/issues/${issueId}/claim`,
         {
           method: "POST",
           credentials: "include",

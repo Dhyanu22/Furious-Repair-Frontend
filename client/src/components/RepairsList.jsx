@@ -10,10 +10,10 @@ const RepairsList = () => {
     // Fetch user's issues from backend
     const fetchRepairs = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/users/issues", {
+        const response = await fetch("http://furious-repair-backend.onrender.com/api/users/issues", {
           credentials: "include",
         });
-        if (!response.ok) {
+        if (!response.ok) {sdf
           setRepairs([]);
         } else {
           const data = await response.json();

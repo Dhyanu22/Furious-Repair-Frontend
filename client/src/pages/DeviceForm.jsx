@@ -36,7 +36,7 @@ const DeviceForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/users/issue", {
+      const response = await fetch("http://furious-repair-backend.onrender.com/api/users/issue", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

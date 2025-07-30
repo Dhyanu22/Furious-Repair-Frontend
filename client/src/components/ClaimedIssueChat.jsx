@@ -15,7 +15,7 @@ const ClaimedIssueChat = () => {
     // Fetch issue details
     const fetchIssue = async () => {
       const res = await fetch(
-        `http://localhost:3001/api/repairer/claimed/${issueId}`,
+        `http://furious-repair-backend.onrender.com/api/repairer/claimed/${issueId}`,
         { credentials: "include" }
       );
       const data = await res.json();
@@ -28,7 +28,7 @@ const ClaimedIssueChat = () => {
     // Fetch chat for this issue
     const fetchChat = async () => {
       const res = await fetch(
-        `http://localhost:3001/api/repairer/claimed/${issueId}/chat`,
+        `http://furious-repair-backend.onrender.com/api/repairer/claimed/${issueId}/chat`,
         { credentials: "include" }
       );
       const data = await res.json();
@@ -47,7 +47,7 @@ const ClaimedIssueChat = () => {
   const handleSend = async () => {
     if (input.trim()) {
       const res = await fetch(
-        `http://localhost:3001/api/repairer/claimed/${issueId}/chat/message`,
+        `http://furious-repair-backend.onrender.com/api/repairer/claimed/${issueId}/chat/message`,
         {
           method: "POST",
           credentials: "include",
@@ -69,7 +69,7 @@ const ClaimedIssueChat = () => {
     // Fetch chat for this issue
     const fetchChat = async () => {
       const res = await fetch(
-        `http://localhost:3001/api/repairer/claimed/${issueId}/chat`,
+        `http://furious-repair-backend.onrender.com/api/repairer/claimed/${issueId}/chat`,
         { credentials: "include" }
       );
       const data = await res.json();
@@ -84,7 +84,7 @@ const ClaimedIssueChat = () => {
     // Fetch repairer shop location
     const fetchShopLocation = async () => {
       const res = await fetch(
-        "http://localhost:3001/api/repairer/shop-location",
+        "http://furious-repair-backend.onrender.com/api/repairer/shop-location",
         { credentials: "include" }
       );
       const data = await res.json();
@@ -103,7 +103,7 @@ const ClaimedIssueChat = () => {
     // Fetch user's location for this issue
     const fetchUserLocation = async () => {
       const res = await fetch(
-        `http://localhost:3001/api/users/issues/${issueId}/user-location`,
+        `http://furious-repair-backend.onrender.com/api/users/issues/${issueId}/user-location`,
         { credentials: "include" }
       );
       const data = await res.json();

@@ -66,11 +66,11 @@ const SignUpLogin = () => {
 
   const checkRepairerAndRedirect = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/repairer/me", {
+      const res = await fetch("http://furious-repair-backend.onrender.com/api/repairer/me", {
         credentials: "include",
       });
       if (res.ok) {
-        const data = await res.json();
+        const data = await res.json();asd
         if (data.isRepairer) {
           localStorage.setItem(
             "user",
